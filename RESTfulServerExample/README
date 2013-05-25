@@ -1,0 +1,9 @@
+** Create Project
+	mvn archetype:generate -DgroupId=com.jeya.rest -DartifactId=RESTfulExample -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+	
+** Convert to eclipse project
+	mvn eclipse:eclipse -Dwtpversion=2.0 -DdownloadSources=true  -DdownloadJavadocs=true
+	
+** References
+	http://www.mkyong.com/tutorials/jax-rs-tutorials/
+	http://www.vogella.com/articles/REST/article.html

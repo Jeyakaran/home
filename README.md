@@ -11,6 +11,8 @@ Description:
 
 Maven
 Resful API
+Jersey 
+https://jersey.java.net/
 JSON for message tranfer
 
 Apache HttpComponents
