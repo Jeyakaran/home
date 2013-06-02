@@ -2,16 +2,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>home.example</groupId>
-	<artifactId>RESTfulServerExample</artifactId>
-	<packaging>war</packaging>
+	<artifactId>RESTfulClientExample</artifactId>
+	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>RESTfulServerExample Maven Webapp</name>
+	<name>RESTfulClientExample</name>
 	<url>http://maven.apache.org</url>
-
 	<properties>
 		<junit.version>3.8.1</junit.version>
 		<jersey-server.version>1.8</jersey-server.version>
-		<jersey-json.version>1.8</jersey-json.version>
 	</properties>
 
 	<repositories>
@@ -33,14 +31,14 @@
 
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-server</artifactId>
+			<artifactId>jersey-client</artifactId>
 			<version>${jersey-server.version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.sun.jersey</groupId>
-			<artifactId>jersey-json</artifactId>
-			<version>${jersey-json.version}</version>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>1.7.1</version>
 		</dependency>
 
 		<dependency>
@@ -52,7 +50,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>RESTfulServerExample</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

@@ -1,0 +1,9 @@
+** Create Project
+	mvn archetype:generate -DgroupId=home.example -DartifactId=RESTfulClientExample -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+	
+** Convert to eclipse project
+	mvn eclipse:eclipse -DdownloadSources=true  -DdownloadJavadocs=true
+	
+** References
+	http://www.mkyong.com/tutorials/jax-rs-tutorials/
+	http://www.vogella.com/articles/REST/article.html
