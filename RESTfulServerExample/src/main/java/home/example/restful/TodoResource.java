@@ -3,6 +3,7 @@
  */
 package home.example.restful;
 
+import home.example.model.Task;
 import home.example.model.ToDo;
 
 import java.util.ArrayList;
@@ -39,15 +40,27 @@ public class TodoResource {
 	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getListOfTodoJson() {
 
+		List<Task> tasks = new ArrayList<Task>();
+		Task task1 = new Task();
+		task1.setTaskName("Task 01 Name");
+		task1.setTaskDescription("Task 01 Description");
+		Task task2 = new Task();
+		task2.setTaskName("Task 02 Name");
+		task2.setTaskDescription("Task 02 Description");
+		tasks.add(task1);
+		tasks.add(task2);
+
 		List<ToDo> todoList = new ArrayList<ToDo>();
 		ToDo toDoOne = new ToDo();
 		toDoOne.setSummary("This is my first todo");
 		toDoOne.setDescription("This is my first todo");
+		toDoOne.setTasks(tasks);
 		todoList.add(toDoOne);
 
 		ToDo toDoTwo = new ToDo();
 		toDoTwo.setSummary("This is my Second todo");
 		toDoTwo.setDescription("This is my Second todo");
+		toDoTwo.setTasks(tasks);
 		todoList.add(toDoTwo);
 
 		GenericEntity entity = new GenericEntity<List<ToDo>>(todoList) {
